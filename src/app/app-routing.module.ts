@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: () => import('@modules/home').then(m => m.HomeModule)
   },
   {
+    path: 'genre',
+    loadChildren: () => import('@modules/genre').then(m => m.GenreModule)
+  },
+  {
     path: '**',
     redirectTo: '404'
   }

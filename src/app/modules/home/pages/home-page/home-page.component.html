@@ -1,5 +1,5 @@
 <div class="flex h-full gap-4">
-    <div class="flex flex-column h-full" style="background: #262850;">
+    <div class="flex flex-column h-full w-22rem" style="background: #262850;">
         <div class="p-2">
             <mat-form-field class="w-12">
                 <mat-label>Buscar por</mat-label>
@@ -8,11 +8,11 @@
             </mat-form-field>
         </div>
         
-        <div class="flex flex-column p-2">
+        <div class="flex flex-column p-2 align-items-center gap-3">
             <h2 class="text-white">Estrenos</h2>
-            <mat-card *ngFor="let premier of premiers | slice:0:2;" class="w-12">
+            <mat-card *ngFor="let premier of premiers | slice:0:2;" class="w-10">
                 <mat-card-content>
-                    <img alt="Movie image" [src]="apiUrl+''+premier.poster_path">
+                    <img alt="Movie image" src="./assets/barbie.jpg" class="w-full">
                 </mat-card-content>
                 <mat-card-header>
                     <mat-card-title >
@@ -37,24 +37,18 @@
     </div>
     <div>
         <h2>Accion</h2>
-        <div class="flex gap-3 flex-wrap">
-            <mat-card *ngFor="let action of actions | slice:0:4;" class="w-5">
+        <div class="flex gap-3 flex-wrap justify-content-center">
+            <mat-card *ngFor="let action of actions | slice:0:4;" class="w-3">
                
                 <mat-card-content>
-                    <img alt="Movie image" [src]="apiUrl+''+action.poster_path">
+                    <img alt="Movie image" [src]="action.poster_path" class="w-full h-18rem">
                 </mat-card-content>
                 <mat-card-header>
                     <mat-card-title >
                         {{action.title}}
                     </mat-card-title>
-                    <mat-card-subtitle >
-                        {{action.overview}}
-
-                    </mat-card-subtitle>
-
                 </mat-card-header>
                 <mat-card-actions>
-
                     <mat-chip>{{action.popularity}}</mat-chip>
                     <mat-chip>{{action.release_date}}</mat-chip>
                     <mat-chip>{{action.original_language}}</mat-chip>

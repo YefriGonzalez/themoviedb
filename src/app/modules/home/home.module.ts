@@ -6,11 +6,12 @@ import { LayoutComponent } from './pages/layout/layout.component';
 import { MaterialModule } from '..';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 
-
+import { GenrePageComponent } from './pages/genre-page/genre-page.component';
 @NgModule({
   declarations: [
     LayoutComponent,
-    HomePageComponent
+    HomePageComponent,
+    GenrePageComponent
   ],
   imports: [
     CommonModule,
