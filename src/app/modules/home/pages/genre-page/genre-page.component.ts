@@ -1,6 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { MovieModel } from '@modules/genre/models';
-import { GenreService } from '@modules/genre/services/genre.service';
+import { MovieModel } from '@modules/home/models';
+import { HomePageService } from '@modules/home/services/home-page.service';
 
 @Component({
   selector: 'app-genre-page',
@@ -9,7 +9,7 @@ import { GenreService } from '@modules/genre/services/genre.service';
 })
 export class GenrePageComponent implements OnInit {
   genres:MovieModel[];
-  private genreService=inject(GenreService);
+  private genreService=inject(HomePageService);
   constructor(){
     this.genres=[];
   }

@@ -13,4 +13,11 @@ export class HomePageService {
   getPremier(){
     return this.apiService.getAll('top_rated')
   }
+  getAllMovies(){
+    return this.apiService.getAll('upcoming')
+  }
+
+  getAllCounry(){
+    return this.apiService.getAll('now_playing')
+  }
 }

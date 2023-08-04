@@ -7,11 +7,13 @@ import { MaterialModule } from '..';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 
 import { GenrePageComponent } from './pages/genre-page/genre-page.component';
+import { CountryComponent } from './pages/country/country.component';
 @NgModule({
   declarations: [
     LayoutComponent,
     HomePageComponent,
-    GenrePageComponent
+    GenrePageComponent,
+    CountryComponent
   ],
   imports: [
     CommonModule,

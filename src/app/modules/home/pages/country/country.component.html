@@ -1,0 +1,19 @@
+<div class="flex flex-wrap gap-6">
+    <mat-card *ngFor="let item of countrys|slice:0:10;" class="w-2">
+        <mat-card-content>
+            <img alt="Movie image" [src]="item.poster_path" class="w-full">
+        </mat-card-content>
+        <mat-card-header>
+            <mat-card-title >
+                {{item.title}}
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-actions>
+
+            <mat-chip>{{item.popularity}}</mat-chip>
+            <mat-chip>{{item.release_date}}</mat-chip>
+            <mat-chip>{{item.original_language}}</mat-chip>
+        </mat-card-actions>
+    </mat-card>
+</div>
+
