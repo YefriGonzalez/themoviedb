@@ -1,0 +1,71 @@
+<div class="flex h-full gap-4">
+    <div class="flex flex-column h-full" style="background: #262850;">
+        <div class="p-2">
+            <mat-form-field class="w-12">
+                <mat-label>Buscar por</mat-label>
+                <input type="text" matInput>
+                <mat-icon matSuffix>search</mat-icon>
+            </mat-form-field>
+        </div>
+        
+        <div class="flex flex-column p-2">
+            <h2 class="text-white">Estrenos</h2>
+            <mat-card *ngFor="let premier of premiers | slice:0:2;" class="w-12">
+                <mat-card-content>
+                    <img alt="Movie image" [src]="apiUrl+''+premier.poster_path">
+                </mat-card-content>
+                <mat-card-header>
+                    <mat-card-title >
+                        {{premier.title}}
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-actions>
+
+                    <mat-chip>{{premier.popularity}}</mat-chip>
+                    <mat-chip>{{premier.release_date}}</mat-chip>
+                    <mat-chip>{{premier.original_language}}</mat-chip>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+        <div class="flex justify-content-between align-items-center">
+            <div class="flex flex-column">
+                <mat-icon class="text-white">person</mat-icon>
+                <mat-label class="text-white">Username</mat-label>
+            </div>
+           <mat-icon class="text-white">more_vert</mat-icon>
+        </div>
+    </div>
+    <div>
+        <h2>Accion</h2>
+        <div class="flex gap-3 flex-wrap">
+            <mat-card *ngFor="let action of actions | slice:0:4;" class="w-5">
+               
+                <mat-card-content>
+                    <img alt="Movie image" [src]="apiUrl+''+action.poster_path">
+                </mat-card-content>
+                <mat-card-header>
+                    <mat-card-title >
+                        {{action.title}}
+                    </mat-card-title>
+                    <mat-card-subtitle >
+                        {{action.overview}}
+
+                    </mat-card-subtitle>
+
+                </mat-card-header>
+                <mat-card-actions>
+
+                    <mat-chip>{{action.popularity}}</mat-chip>
+                    <mat-chip>{{action.release_date}}</mat-chip>
+                    <mat-chip>{{action.original_language}}</mat-chip>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+        <div>
+            <h2>Trending</h2>
+            <mat-card *ngFor="let trend of trends">
+
+            </mat-card>
+        </div>
+    </div>
+</div>
